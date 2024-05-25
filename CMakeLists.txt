@@ -343,7 +343,7 @@ if(ENABLE_STATIC_LIB)
         PUBLIC      ${CMAKE_CURRENT_SOURCE_DIR}/bzlib_private.h
         INTERFACE   ${CMAKE_CURRENT_SOURCE_DIR}/bzlib.h)
     set_target_properties(bz2_static PROPERTIES
-        COMPILE_FLAGS       "${WARNCFLAGS}"
+        COMPILE_FLAGS       "${WARNCFLAGS} -fPIC"
         VERSION             ${LT_VERSION}
         SOVERSION           ${LT_SOVERSION}
         ARCHIVE_OUTPUT_NAME bz2_static)
